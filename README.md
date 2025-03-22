@@ -39,7 +39,7 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 '''
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-content = """
+content = ~~~
 <!DOCTYPE html>
 <html>
 <body>
@@ -55,7 +55,7 @@ content = """
 
 </body>
 </html>
-"""
+~~~
 
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
