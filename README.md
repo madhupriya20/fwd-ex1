@@ -36,10 +36,10 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
-'''
+~~~
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-content = ~~~
+content = """
 <!DOCTYPE html>
 <html>
 <body>
@@ -55,8 +55,7 @@ content = ~~~
 
 </body>
 </html>
-~~~
-
+"""
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("Request received")
@@ -69,7 +68,7 @@ server_address = ('', 8080)
 httpd = HTTPServer(server_address, MyHandler)
 print("My web server is running on port 8080...")
 httpd.serve_forever()
-'''
+~~~
 
 # OUTPUT:
 #![alt text](<2025-03-18 (4).png>)
